@@ -33,15 +33,15 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.testng:testng:7.1.0")
-	compileOnly("org.projectlombok:lombok")
-	annotationProcessor("org.projectlombok:lombok")
 	compileOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.mapstruct:mapstruct:1.5.5.Final")
-//	kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("com.auth0:java-jwt:4.4.0")
+	implementation("org.springframework:spring-web:6.0.11")
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.1.4")
 }
 
 tasks.withType<KotlinCompile> {
