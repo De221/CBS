@@ -1,26 +1,26 @@
 version: '3.7'
 
-services:
-  db:
-    image: "postgres"
-    container_name: cbs-postgres-container
-    environment:
-      - POSTGRES_USER=A1D8445
-      - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=cbs_base
-    ports:
-      - "5433:5432"
-  app:
-    image: "cbs"
-    build:
-      context: .
-    container_name: cbs-container
-    ports:
-      - "8081:8080"
-    depends_on:
-      - db
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/cbs_base
-      - SPRING_DATASOURCE_USERNAME=A1D8445
-      - SPRING_DATASOURCE_PASSWORD=admin
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#services:
+#  db:
+#    image: "postgres"
+#    container_name: cbs-postgre-database
+#    environment:
+#      - POSTGRES_USER=A1D8445
+#      - POSTGRES_PASSWORD=admin
+#      - POSTGRES_DB=cbs_base
+#    ports:
+#      - "5433:5432"
+#  app:
+#    image: "cbs"
+#    build:
+#      context: .
+#    container_name: cbs-application
+#    ports:
+#      - "8081:8080"
+#    depends_on:
+#      - db
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/cbs_base
+#      - SPRING_DATASOURCE_USERNAME=A1D8445
+#      - SPRING_DATASOURCE_PASSWORD=admin
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update

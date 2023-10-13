@@ -4,7 +4,6 @@ plugins {
 	id("org.springframework.boot") version "3.1.4"
 	id("io.spring.dependency-management") version "1.1.3"
 	kotlin("jvm") version "1.8.22"
-//	kotlin("kapt") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
 	kotlin("plugin.jpa") version "1.8.22"
 }
@@ -12,9 +11,11 @@ plugins {
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
+
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 }
+
 
 configurations {
 	compileOnly {
@@ -32,7 +33,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.testng:testng:7.1.0")
+	implementation("org.testng:testng:7.7.0")
 	compileOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
